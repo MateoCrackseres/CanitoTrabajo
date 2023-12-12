@@ -15,6 +15,7 @@ namespace bibliotecadb.vista
 {
     public partial class FormularioLibros : Form
     {
+        private bool band = false;
         public FormularioLibros()
         {
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace bibliotecadb.vista
         }
         private void Cargartabla()
         {
-            LibroData dato = new LibroData();
+           /* LibroData dato = new LibroData();
             foreach(libros item in dato.listarlibros())
             {
                 dataGridlibros.Rows.Add(
@@ -34,7 +35,47 @@ namespace bibliotecadb.vista
                     item.Nombre,
                     item.Isbn,
                     item.Autor);
+            }*/
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UsuarioNuevo usuarioNuevo = new UsuarioNuevo();
+            this.Hide();
+            usuarioNuevo.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CuentaExistente cuentaExistente = new CuentaExistente();
+            this.Hide();
+            cuentaExistente.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            
+            if (band == false)
+            {
+                label4.Visible = true;
+                band= true;
             }
+            else
+            {
+                label4.Visible = false;
+                band = false;
+            }
+            
+        }
+
+        private void modoAdministradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

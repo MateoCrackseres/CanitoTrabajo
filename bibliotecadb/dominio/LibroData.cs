@@ -91,7 +91,7 @@ namespace bibliotecadb.dominio
         public List<libros> listarlibros()
         {
             List<libros> listaLibros = new List<libros>();
-            string consulta = "SELECT *FROM libros WHERE estado = true;";
+            string consulta = "SELECT *FROM libros WHERE estado = TRUE;";
             comando = new MySqlCommand(consulta, conn.GetConexion());
             try
             {

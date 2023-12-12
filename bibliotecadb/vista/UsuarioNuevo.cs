@@ -50,35 +50,16 @@ namespace bibliotecadb.vista
                 domicilio = txtDomicilio.Text;
                 telefono = txtTelefono.Text;
                 dni = txtDni.Text;
-                string Cadenaconexion = "Server=localhost;Database=dbbiblioteca;User=root;Password=";
-                using (MySqlConnection conexion = new MySqlConnection(Cadenaconexion))
-                {
-                    try
-                    {
-                        conexion.Open();
-                        string consulta = "INSERT INTO lectores (nombre, apellido, domicilio, telefono, estado) VALUES (@nombre, @apellido, @domicilio, @telefono, @estado)";
-                
-                
-                        using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
-                        {
-                            comando.Parameters.AddWithValue("@nombre", nombre);
-                            comando.Parameters.AddWithValue("@apellido", apellido);
-                            comando.Parameters.AddWithValue("@domicilio", domicilio);
-                            comando.Parameters.AddWithValue("@telefono", telefono);
-                            comando.Parameters.AddWithValue("@estado", activo);
-                            comando.ExecuteNonQuery();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al intentar conectar con la base de datos" + ex.Message);
-                    }
-                }
 
+                MessageBox.Show("Usuario creado con exito! Inicia sesion","Usuario nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                FormularioLibros formularioLibros = new FormularioLibros();
+                this.Hide();
+                formularioLibros.Show();
             }
             else
             {
-                MessageBox.Show("Por favor, rellena todos los campos", "Aceptar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, rellena todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -125,6 +106,11 @@ namespace bibliotecadb.vista
         private void UsuarioNuevo_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
