@@ -24,13 +24,12 @@ namespace bibliotecadb.vista
             cargarTabla();
         }
         private void cargarTabla()
-            {
-                LibroData librito = new LibroData();
+        {
+            LibroData librito = new LibroData();
 
-                foreach (libros item in librito.listarlibros())
-                {
-                    dtgDatos.Rows.Add(item.Id_Libro, item.Isbn, item.Nombre, item.Tipo, item.Editorial, item.Autor);
-                }
+            foreach (libros item in librito.listarlibros())
+            {
+                dtgDatos.Rows.Add(item.Id_Libro, item.Isbn, item.Nombre, item.Tipo, item.Editorial, item.Autor);
             }
         }
     }

@@ -12,7 +12,6 @@ namespace bibliotecadb.dominio
 {
     internal class LibroData : ILibro
     {
-        StreamWriter erroraso = new StreamWriter("errores-Lector.txt");
 
         private conexion conn = new conexion();
         private MySqlCommand comando;
@@ -47,7 +46,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
@@ -75,7 +73,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
@@ -145,7 +142,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
@@ -160,7 +156,7 @@ namespace bibliotecadb.dominio
             }
         }
 
-        libros ILibro.buscarLibro(string _isbn)
+        public libros buscarLibro(string _isbn)
         {
 
             string sql = "SELECT * FROM libros WHERE isbn=@isbn_ AND estado = TRUE;";
@@ -188,7 +184,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
@@ -204,7 +199,7 @@ namespace bibliotecadb.dominio
             return (libro);
         }
 
-        libros ILibro.buscarLibroXid(string _id_Libro)
+        public libros buscarLibroXid(string _id_Libro)
         {
             string sql = "SELECT * FROM libros WHERE id_Libro=@id_ AND estado = TRUE;";
             comando = new MySqlCommand(sql, conn.GetConexion());
@@ -222,14 +217,13 @@ namespace bibliotecadb.dominio
                     libro.Nombre = puntero.GetString(2);
                     libro.Tipo = puntero.GetString(3);
                     libro.Editorial = puntero.GetString(4);
-                    libro.Editorial = puntero.GetString(5);
+                    libro.Autor = puntero.GetString(5);
                     libro.Estado = true;
                 }
                 conn.setConexion();
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally

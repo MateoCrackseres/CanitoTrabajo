@@ -75,7 +75,9 @@ namespace bibliotecadb.vista
 
         private void modoAdministradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Administrar administrar = new Administrar();
+            this.Hide();
+            administrar.Show();
         }
     }
 }

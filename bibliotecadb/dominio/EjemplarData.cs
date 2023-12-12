@@ -16,7 +16,6 @@ namespace bibliotecadb.dominio
     
     internal class EjemplarData : IEjemplar
     {
-        StreamWriter erroraso = new StreamWriter("errores-Ejemplares.txt");
 
         private conexion conn = new conexion();
         private MySqlCommand comando;
@@ -28,7 +27,7 @@ namespace bibliotecadb.dominio
 
         public void agregarEjemplar(ejemplares _ejemplar)
         {
-            string sql = "INSERT INTO ejemplares(codigo,id_libro,cantidad,estado) VALUE (@codigo,@id_libro,@cantidad, TRUE);";
+            string sql = "INSERT INTO ejemplares(codigo,id_libro,cantidad,estado) VALUE (@codigo,@id_libro,@cantidad,@estado);";
 
             comando = new MySqlCommand(sql, conn.GetConexion());
 
@@ -38,7 +37,7 @@ namespace bibliotecadb.dominio
             comando.Parameters["@id_libro"].Value = _ejemplar.Id_libro;
             comando.Parameters.Add("@cantidad", MySqlDbType.VarChar);
             comando.Parameters["@cantidad"].Value = _ejemplar.Cantidad;
-            comando.Parameters.Add("@estado", MySqlDbType.Int16);
+            comando.Parameters.Add("@estado", MySqlDbType.VarChar);
             comando.Parameters["@estado"].Value = _ejemplar.Estado;
 
             try
@@ -48,7 +47,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
             finally 
             {
@@ -63,7 +61,7 @@ namespace bibliotecadb.dominio
 
         public void eliminarEjemplar(int _id_ejemplar)
         {
-            string sql = "UPDATE ejemplares SET estado= FALSE WHERE idEjemplar= @_id_ejemplar;";
+            string sql = "UPDATE ejemplares SET estado= No disponible WHERE idEjemplar= @_id_ejemplar;";
 
             comando = new MySqlCommand(sql, conn.GetConexion());
 
@@ -77,7 +75,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                 erroraso.WriteLine(error.ToString());
             }
             finally
             {
@@ -91,7 +88,7 @@ namespace bibliotecadb.dominio
 
         public List<ejemplares> listarEjemplar()
         {
-            string sql = "SELECT * FROM ejemplares WHERE estado = TRUE;";
+            string sql = "SELECT * FROM ejemplares WHERE estado = 'Disponible';";
             List<ejemplares> listaEjemplares = new List<ejemplares>();
             comando = new MySqlCommand(sql, conn.GetConexion());
 
@@ -106,7 +103,7 @@ namespace bibliotecadb.dominio
                     ejemplar.Codigo = puntero.GetString(1);
                     ejemplar.Id_libro = puntero.GetInt32(2);
                     ejemplar.Cantidad = puntero.GetInt32(3);
-                    ejemplar.Estado = true;
+                    ejemplar.Estado = puntero.GetString(4);
 
                     listaEjemplares.Add(ejemplar);
                 }
@@ -114,7 +111,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
@@ -133,7 +129,7 @@ namespace bibliotecadb.dominio
         public void modificarEjemplar(ejemplares _ejemplar)
         {
 
-            string sql = "UPDATE ejemplares SET codigo=@codigo_,id_libro=@id_libro_,cantidad=@cantidad_ WHERE idEjemplar = @id_;";
+            string sql = "UPDATE ejemplares SET codigo=@codigo_,id_libro=@id_libro_,cantidad=@cantidad_,estado=@estado_ WHERE idEjemplar = @id_;";
 
             comando = new MySqlCommand(sql, conn.GetConexion());
 
@@ -143,6 +139,8 @@ namespace bibliotecadb.dominio
             comando.Parameters["@id_libro"].Value = _ejemplar.Id_libro;
             comando.Parameters.Add("@cantidad", MySqlDbType.VarChar);
             comando.Parameters["@cantidad"].Value = _ejemplar.Cantidad;
+            comando.Parameters.Add("@estado", MySqlDbType.VarChar);
+            comando.Parameters["@estado"].Value = _ejemplar.Estado;
             comando.Parameters.Add("@id_", MySqlDbType.Int16);
             comando.Parameters["@id_"].Value = _ejemplar.Id_ejemplar;
 
@@ -153,7 +151,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
@@ -170,7 +167,7 @@ namespace bibliotecadb.dominio
 
         ejemplares IEjemplar.buscarEjemplar(string _codigo)
         {
-            string sql = "SELECT * FROM ejemplares WHERE codigo=@codigo_ AND estado = TRUE;";
+            string sql = "SELECT * FROM ejemplares WHERE codigo=@codigo_ AND estado = 'Disponible';";
             comando = new MySqlCommand(sql, conn.GetConexion());
             ejemplares ejemplar = new ejemplares();
 
@@ -187,13 +184,12 @@ namespace bibliotecadb.dominio
                     ejemplar.Codigo = puntero.GetString(1);
                     ejemplar.Id_libro = puntero.GetInt32(2);
                     ejemplar.Cantidad = puntero.GetInt32(3);
-                    ejemplar.Estado = true;
+                    ejemplar.Estado = puntero.GetString(4);
                 }
                 conn.setConexion();
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
@@ -209,14 +205,14 @@ namespace bibliotecadb.dominio
             return (ejemplar);
         }
 
-        ejemplares IEjemplar.buscarEjemplarXid(string _id_ejemplar)
+        public ejemplares buscarEjemplarXid(string _id_libro)
         {
-            string sql = "SELECT * FROM ejemplares WHERE idEjemplar=@id_ AND estado = TRUE;";
+            string sql = "SELECT * FROM ejemplares WHERE id_libro=@id_ AND estado = 'Disponible';";
             comando = new MySqlCommand(sql, conn.GetConexion());
             ejemplares ejemplar = new ejemplares();
 
             comando.Parameters.Add("@id_", MySqlDbType.Int16);
-            comando.Parameters["@id_"].Value = _id_ejemplar;
+            comando.Parameters["@id_"].Value = _id_libro ;
             try
             {
                 MySqlDataReader puntero = comando.ExecuteReader();
@@ -226,13 +222,12 @@ namespace bibliotecadb.dominio
                     ejemplar.Codigo = puntero.GetString(1);
                     ejemplar.Id_libro = puntero.GetInt32(2);
                     ejemplar.Cantidad = puntero.GetInt32(3);
-                    ejemplar.Estado = true;
+                    ejemplar.Estado = puntero.GetString(4);
                 }
                 conn.setConexion();
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally

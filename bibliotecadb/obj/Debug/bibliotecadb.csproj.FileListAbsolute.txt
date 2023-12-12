@@ -55,3 +55,7 @@ C:\Users\matre\OneDrive\Escritorio\CanitoTrabajo\bibliotecadb\obj\Debug\bibliote
 C:\Users\matre\OneDrive\Escritorio\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.MenuPrincipal.resources
 C:\Users\matre\OneDrive\Escritorio\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.Administrar.resources
 C:\Users\matre\OneDrive\Escritorio\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.PuenteA.resources
+C:\Users\matre\OneDrive\Escritorio\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.AdministrarAgregar.resources
+C:\Users\matre\OneDrive\Escritorio\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.AdministrarEliminarXID.resources
+C:\Users\matre\OneDrive\Escritorio\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.AdministrarModificar.resources
+C:\Users\matre\OneDrive\Escritorio\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.Lectores.LectorEliminar.resources

@@ -16,5 +16,10 @@ namespace bibliotecadb.vista
         {
             InitializeComponent();
         }
+
+        private void AdministrarModificar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

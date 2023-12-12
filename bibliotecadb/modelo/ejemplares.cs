@@ -11,7 +11,7 @@ namespace bibliotecadb.modelo
         private int id_ejemplar;
         private string codigo;
         private int id_libro;
-        private bool estado;
+        private string estado;
         private int cantidad;
   
 
@@ -19,7 +19,7 @@ namespace bibliotecadb.modelo
         {
         }
 
-        public ejemplares(string codigo, int id_libro, bool estado, int cantidad)
+        public ejemplares(string codigo, int id_libro, string estado, int cantidad)
         {
             this.Codigo = codigo;
             this.id_libro = id_libro;
@@ -27,7 +27,7 @@ namespace bibliotecadb.modelo
             this.cantidad = cantidad;
         }
 
-        public ejemplares(int id_ejemplar, string codigo, int id_libro, bool estado, int cantidad)
+        public ejemplares(int id_ejemplar, string codigo, int id_libro, string estado, int cantidad)
         {
             this.id_ejemplar = id_ejemplar;
             this.Codigo = codigo;
@@ -39,7 +39,7 @@ namespace bibliotecadb.modelo
         public int Id_ejemplar { get => id_ejemplar; set => id_ejemplar = value; }
         public string Codigo { get => codigo; set => codigo = value; }
         public int Id_libro { get => id_libro; set => id_libro = value; }
-        public bool Estado { get => estado; set => estado = value; }
+        public string Estado { get => estado; set => estado = value; }
         public int Cantidad { get => cantidad; set => cantidad = value; }
     }
 }
