@@ -51,12 +51,6 @@
             this.btnAgregarLectores = new System.Windows.Forms.Button();
             this.subMenuPrestamos = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.btnModificarPrestamos = new System.Windows.Forms.Button();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.btnAgregarPrestamos = new System.Windows.Forms.Button();
-            this.pnInicio = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnEjemplares = new System.Windows.Forms.Panel();
             this.pnPrestamos = new System.Windows.Forms.Panel();
             this.btnEjemplares = new System.Windows.Forms.Button();
@@ -68,6 +62,10 @@
             this.btnLibros = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.btnModificarPrestamos = new System.Windows.Forms.Button();
+            this.pnInicio = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.subMenuLibro.SuspendLayout();
             this.subMenuEjemplares.SuspendLayout();
@@ -89,10 +87,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panel2.Controls.Add(this.subMenuPrestamos);
             this.panel2.Controls.Add(this.subMenuLibro);
             this.panel2.Controls.Add(this.subMenuEjemplares);
             this.panel2.Controls.Add(this.subMenuLectores);
-            this.panel2.Controls.Add(this.subMenuPrestamos);
             this.panel2.Controls.Add(this.pnInicio);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pnEjemplares);
@@ -320,14 +318,12 @@
             // 
             // subMenuPrestamos
             // 
+            this.subMenuPrestamos.Controls.Add(this.btnModificarPrestamos);
             this.subMenuPrestamos.Controls.Add(this.panel16);
             this.subMenuPrestamos.Controls.Add(this.panel17);
-            this.subMenuPrestamos.Controls.Add(this.btnModificarPrestamos);
-            this.subMenuPrestamos.Controls.Add(this.panel18);
-            this.subMenuPrestamos.Controls.Add(this.btnAgregarPrestamos);
-            this.subMenuPrestamos.Location = new System.Drawing.Point(20, 447);
+            this.subMenuPrestamos.Location = new System.Drawing.Point(12, 456);
             this.subMenuPrestamos.Name = "subMenuPrestamos";
-            this.subMenuPrestamos.Size = new System.Drawing.Size(200, 100);
+            this.subMenuPrestamos.Size = new System.Drawing.Size(200, 36);
             this.subMenuPrestamos.TabIndex = 11;
             this.subMenuPrestamos.Visible = false;
             // 
@@ -338,78 +334,6 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(5, 32);
             this.panel16.TabIndex = 8;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel17.Location = new System.Drawing.Point(3, 54);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(5, 32);
-            this.panel17.TabIndex = 6;
-            // 
-            // btnModificarPrestamos
-            // 
-            this.btnModificarPrestamos.FlatAppearance.BorderSize = 0;
-            this.btnModificarPrestamos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnModificarPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarPrestamos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarPrestamos.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnModificarPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarPrestamos.Location = new System.Drawing.Point(12, 54);
-            this.btnModificarPrestamos.Name = "btnModificarPrestamos";
-            this.btnModificarPrestamos.Size = new System.Drawing.Size(185, 32);
-            this.btnModificarPrestamos.TabIndex = 5;
-            this.btnModificarPrestamos.Text = "Modificar Prestamos";
-            this.btnModificarPrestamos.UseVisualStyleBackColor = true;
-            this.btnModificarPrestamos.Click += new System.EventHandler(this.btnModificarPrestamos_Click);
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel18.Location = new System.Drawing.Point(3, 14);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(5, 32);
-            this.panel18.TabIndex = 4;
-            // 
-            // btnAgregarPrestamos
-            // 
-            this.btnAgregarPrestamos.FlatAppearance.BorderSize = 0;
-            this.btnAgregarPrestamos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnAgregarPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarPrestamos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarPrestamos.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAgregarPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarPrestamos.Location = new System.Drawing.Point(12, 14);
-            this.btnAgregarPrestamos.Name = "btnAgregarPrestamos";
-            this.btnAgregarPrestamos.Size = new System.Drawing.Size(185, 32);
-            this.btnAgregarPrestamos.TabIndex = 3;
-            this.btnAgregarPrestamos.Text = "Agregar Prestamos";
-            this.btnAgregarPrestamos.UseVisualStyleBackColor = true;
-            this.btnAgregarPrestamos.Click += new System.EventHandler(this.btnAgregarPrestamos_Click);
-            // 
-            // pnInicio
-            // 
-            this.pnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnInicio.Location = new System.Drawing.Point(3, 200);
-            this.pnInicio.Name = "pnInicio";
-            this.pnInicio.Size = new System.Drawing.Size(5, 32);
-            this.pnInicio.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(14, 200);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Inicio";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // pnEjemplares
             // 
@@ -541,6 +465,55 @@
             this.panel3.Size = new System.Drawing.Size(1064, 576);
             this.panel3.TabIndex = 2;
             // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel17.Location = new System.Drawing.Point(3, 3);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(5, 32);
+            this.panel17.TabIndex = 6;
+            // 
+            // btnModificarPrestamos
+            // 
+            this.btnModificarPrestamos.FlatAppearance.BorderSize = 0;
+            this.btnModificarPrestamos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnModificarPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarPrestamos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarPrestamos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnModificarPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarPrestamos.Location = new System.Drawing.Point(15, 4);
+            this.btnModificarPrestamos.Name = "btnModificarPrestamos";
+            this.btnModificarPrestamos.Size = new System.Drawing.Size(185, 32);
+            this.btnModificarPrestamos.TabIndex = 5;
+            this.btnModificarPrestamos.Text = "Modificar Prestamos";
+            this.btnModificarPrestamos.UseVisualStyleBackColor = true;
+            this.btnModificarPrestamos.Click += new System.EventHandler(this.btnModificarPrestamos_Click);
+            // 
+            // pnInicio
+            // 
+            this.pnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.pnInicio.Location = new System.Drawing.Point(3, 200);
+            this.pnInicio.Name = "pnInicio";
+            this.pnInicio.Size = new System.Drawing.Size(5, 32);
+            this.pnInicio.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(6, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(214, 32);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Menu";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -585,14 +558,8 @@
         private System.Windows.Forms.Panel pnLectores;
         private System.Windows.Forms.Button btnLectores;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel pnInicio;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel subMenuPrestamos;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Button btnModificarPrestamos;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Button btnAgregarPrestamos;
         private System.Windows.Forms.Panel subMenuLectores;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
@@ -605,5 +572,9 @@
         private System.Windows.Forms.Button btnModificarEjemplares;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnAgregarEjemplares;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Button btnModificarPrestamos;
+        private System.Windows.Forms.Panel pnInicio;
+        private System.Windows.Forms.Button button1;
     }
 }

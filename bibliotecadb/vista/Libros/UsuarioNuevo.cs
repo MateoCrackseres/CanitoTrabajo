@@ -122,5 +122,10 @@ namespace bibliotecadb.vista
         {
 
         }
+
+        private void lblUsuarioNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

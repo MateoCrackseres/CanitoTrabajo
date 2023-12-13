@@ -69,7 +69,6 @@ C:\Users\Usuario\Desktop\CanitoTrabajo\bibliotecadb\bin\Debug\System.Buffers.dll
 C:\Users\Usuario\Desktop\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.csproj.AssemblyReference.cache
 C:\Users\Usuario\Desktop\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.Properties.Resources.resources
 C:\Users\Usuario\Desktop\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.Libros.agregarLibros.resources
-C:\Users\Usuario\Desktop\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.CuentaExistente.resources
 C:\Users\Usuario\Desktop\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.FormularioLibros.resources
 C:\Users\Usuario\Desktop\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.MenuPrincipal.resources
 C:\Users\Usuario\Desktop\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.PuenteA.resources
@@ -111,3 +110,4 @@ C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\D
 C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.csproj.CopyComplete
 C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.exe
 C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.pdb
+C:\Users\Usuario\Desktop\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.Prestamos.modificarPrestamos.resources

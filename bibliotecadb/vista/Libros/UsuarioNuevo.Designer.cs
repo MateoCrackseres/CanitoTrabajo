@@ -46,13 +46,14 @@
             // 
             this.lblUsuarioNuevo.AutoSize = true;
             this.lblUsuarioNuevo.Font = new System.Drawing.Font("Bahnschrift Condensed", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblUsuarioNuevo.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblUsuarioNuevo.Location = new System.Drawing.Point(-1, 0);
             this.lblUsuarioNuevo.Name = "lblUsuarioNuevo";
             this.lblUsuarioNuevo.Size = new System.Drawing.Size(411, 84);
             this.lblUsuarioNuevo.TabIndex = 0;
             this.lblUsuarioNuevo.Text = "¡CREA TU USUARIO PARA DISFRUTAR\r\nDE TODO EL CATALOGO DISPONIBLE!";
             this.lblUsuarioNuevo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUsuarioNuevo.Click += new System.EventHandler(this.lblUsuarioNuevo_Click);
             // 
             // label2
             // 
@@ -158,7 +159,7 @@
             // 
             // btnCUsuario
             // 
-            this.btnCUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnCUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(201)))), ((int)(((byte)(250)))));
             this.btnCUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCUsuario.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCUsuario.Location = new System.Drawing.Point(292, 285);

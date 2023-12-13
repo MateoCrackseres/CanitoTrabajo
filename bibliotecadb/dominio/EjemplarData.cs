@@ -136,14 +136,14 @@ namespace bibliotecadb.dominio
 
             comando = new MySqlCommand(sql, conn.GetConexion());
 
-            comando.Parameters.Add("@codigo", MySqlDbType.VarChar);
-            comando.Parameters["@codigo"].Value = _ejemplar.Codigo;
-            comando.Parameters.Add("@id_libro", MySqlDbType.VarChar);
-            comando.Parameters["@id_libro"].Value = _ejemplar.Id_libro;
-            comando.Parameters.Add("@cantidad", MySqlDbType.VarChar);
-            comando.Parameters["@cantidad"].Value = _ejemplar.Cantidad;
-            comando.Parameters.Add("@estado", MySqlDbType.VarChar);
-            comando.Parameters["@estado"].Value = _ejemplar.Estado;
+            comando.Parameters.Add("@codigo_", MySqlDbType.VarChar);
+            comando.Parameters["@codigo_"].Value = _ejemplar.Codigo;
+            comando.Parameters.Add("@id_libro_", MySqlDbType.VarChar);
+            comando.Parameters["@id_libro_"].Value = _ejemplar.Id_libro;
+            comando.Parameters.Add("@cantidad_", MySqlDbType.VarChar);
+            comando.Parameters["@cantidad_"].Value = _ejemplar.Cantidad;
+            comando.Parameters.Add("@estado_", MySqlDbType.VarChar);
+            comando.Parameters["@estado_"].Value = _ejemplar.Estado;
             comando.Parameters.Add("@id_", MySqlDbType.Int16);
             comando.Parameters["@id_"].Value = _ejemplar.Id_ejemplar;
 

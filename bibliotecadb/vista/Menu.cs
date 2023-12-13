@@ -1,6 +1,7 @@
 ﻿using bibliotecadb.vista.Ejemplares;
 using bibliotecadb.vista.Lectores;
 using bibliotecadb.vista.Libros;
+using bibliotecadb.vista.Prestamos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -102,7 +103,7 @@ namespace bibliotecadb.vista
 
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
-            subMenuPrestamos.Visible = true;
+            subMenuPrestamos.Visible=true;
             btnEjemplares.Visible = true;
             pnEjemplares.Visible = true;
             btnLectores.Visible = true;
@@ -167,21 +168,6 @@ namespace bibliotecadb.vista
             modificarLectores modificarLector = new modificarLectores();
             cambiarventana(modificarLector);
         }
-
-        private void btnAgregarPrestamos_Click(object sender, EventArgs e)
-        {
-            subMenuPrestamos.Visible = false;
-            btnEjemplares.Visible = true;
-            pnEjemplares.Visible = true;
-            btnLectores.Visible = true;
-            pnLectores.Visible = true;
-            btnPrestamos.Visible = true;
-            pnPrestamos.Visible = true;
-            subMenuPrestamos.BringToFront();
-            //agregarLibros agregarLibros = new agregarLibros();
-            //cambiarventana(agregarLibros);
-        }
-
         private void btnModificarPrestamos_Click(object sender, EventArgs e)
         {
             subMenuPrestamos.Visible = false;
@@ -192,8 +178,15 @@ namespace bibliotecadb.vista
             btnPrestamos.Visible = true;
             pnPrestamos.Visible = true;
             subMenuPrestamos.BringToFront();
-            //agregarLibros agregarLibros = new agregarLibros();
-            //cambiarventana(agregarLibros);
+            modificarPrestamos modificarPrestamo = new modificarPrestamos();
+            cambiarventana(modificarPrestamo);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormularioLibros formularioLibros = new FormularioLibros();
+            this.Hide();
+            formularioLibros.Show();
         }
     }
 }

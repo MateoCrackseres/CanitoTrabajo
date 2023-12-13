@@ -23,7 +23,7 @@ namespace bibliotecadb.vista
 
         private void FormularioLibros_Load(object sender, EventArgs e)
         {
-            
+            Application.Exit();
         }
         private void Cargartabla()
         {
@@ -89,6 +89,11 @@ namespace bibliotecadb.vista
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

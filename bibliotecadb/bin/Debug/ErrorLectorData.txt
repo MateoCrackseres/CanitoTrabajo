@@ -1,0 +1,4 @@
+Fecha y Hora: 13/12/2023 12:27:03
+Error: Fatal error encountered during command execution.
+
+
