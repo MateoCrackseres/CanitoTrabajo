@@ -13,7 +13,7 @@ namespace bibliotecadb.dominio
         void eliminarEjemplar(int _id_ejemplar);
         void modificarEjemplar(ejemplares _ejemplar);
         List<ejemplares> listarEjemplar();
-        ejemplares buscarEjemplar(string _codigo);
-        ejemplares buscarEjemplarXid(string _id_ejemplar);
+        ejemplares buscarEjemplarXId(string _id_ejemplar);
+        ejemplares buscarEjemplarXidLibro(string _id_ejemplar);
     }
 }

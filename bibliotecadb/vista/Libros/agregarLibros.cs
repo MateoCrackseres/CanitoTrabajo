@@ -35,7 +35,7 @@ namespace bibliotecadb.vista.Libros
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string isbn = txtIsbn.Text, nombre = txtNombre.Text, tipo = txtTipo.Text, editorial = txtEditorial.Text, autor = txtAutor.Text;
+            string isbn = txtIsbn.Text.Trim(), nombre = txtNombre.Text.Trim(), tipo = txtTipo.Text.Trim(), editorial = txtEditorial.Text.Trim(), autor = txtAutor.Text.Trim();
            
            libros libros = new libros(isbn,nombre,tipo,editorial,autor,true);
 

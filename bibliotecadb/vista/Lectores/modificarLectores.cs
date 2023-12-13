@@ -14,7 +14,7 @@ namespace bibliotecadb.vista.Lectores
 {
     public partial class modificarLectores : UserControl
     {
-        private lectores lector=new lectores();
+        private lectores lector = new lectores();
 
         private void Cargartabla()
         {
@@ -33,6 +33,19 @@ namespace bibliotecadb.vista.Lectores
         private void modificarLectores_Load(object sender, EventArgs e)
         {
             Cargartabla();
+            txtBuscar2.Visible = true;
+            btnBuscar2.Visible = true;
+            txtApellido.Visible = false;
+            txtNombre.Visible = false;
+            txtDNI.Visible = false;
+            txtDomicilio.Visible = false;
+            txtTelefono.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            btnModificar.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -108,9 +121,6 @@ namespace bibliotecadb.vista.Lectores
 
         private void txtBuscar2_TextChanged(object sender, EventArgs e)
         {
-            txtBuscar2.Clear();
-            txtBuscar2.ForeColor = Color.White;
-            txtBuscar2.Font = new System.Drawing.Font("Century Gothic", 30);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -136,8 +146,6 @@ namespace bibliotecadb.vista.Lectores
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            txtBuscar.Clear();
-            txtBuscar.ForeColor = Color.White;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -151,6 +159,19 @@ namespace bibliotecadb.vista.Lectores
             dtgLectores.Rows.Clear();
             dtgLectores.Rows.Add(lector.IdLector, lector.Apellido, lector.Nombre, lector.Dni, lector.Domicilio, lector.Telefono);
 
+        }
+
+        private void txtBuscar2_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtBuscar2.Clear();
+            txtBuscar2.ForeColor = Color.White;
+            txtBuscar2.Font = new System.Drawing.Font("Century Gothic", 30);
+        }
+
+        private void txtBuscar_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtBuscar.Clear();
+            txtBuscar.ForeColor = Color.White;
         }
     }
 }

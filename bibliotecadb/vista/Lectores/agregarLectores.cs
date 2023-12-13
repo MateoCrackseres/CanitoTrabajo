@@ -36,7 +36,7 @@ namespace bibliotecadb.vista.Lectores
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string apellido = txtApellido.Text, nombre = txtNombre.Text, dni = txtDNI.Text, domicilio = txtDomicilio.Text, telefono = txtTelefono.Text;
+            string apellido = txtApellido.Text.Trim(), nombre = txtNombre.Text.Trim(), dni = txtDNI.Text.Trim(), domicilio = txtDomicilio.Text.Trim(), telefono = txtTelefono.Text.Trim();
 
             lectores lector = new lectores(apellido,nombre,dni,domicilio,telefono, true);
 
@@ -91,6 +91,10 @@ namespace bibliotecadb.vista.Lectores
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtBuscar_MouseClick(object sender, MouseEventArgs e)
+        {
             txtBuscar.Clear();
             txtBuscar.ForeColor = Color.White;
         }

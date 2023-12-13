@@ -165,19 +165,17 @@ namespace bibliotecadb.dominio
             }
         }
 
-        ejemplares IEjemplar.buscarEjemplar(string _codigo)
+        public ejemplares buscarEjemplarXId(string _id_ejemplar)
         {
-            string sql = "SELECT * FROM ejemplares WHERE codigo=@codigo_ AND estado = 'Disponible';";
+            string sql = "SELECT * FROM ejemplares WHERE idEjemplar=@id_ AND estado = 'Disponible';";
             comando = new MySqlCommand(sql, conn.GetConexion());
             ejemplares ejemplar = new ejemplares();
 
-            comando.Parameters.Add("@codigo_", MySqlDbType.String);
-            comando.Parameters["@codigo_"].Value = _codigo;
+            comando.Parameters.Add("@id_", MySqlDbType.Int16);
+            comando.Parameters["@id_"].Value = _id_ejemplar;
             try
             {
-
                 MySqlDataReader puntero = comando.ExecuteReader();
-
                 while (puntero.Read())
                 {
                     ejemplar.Id_ejemplar = puntero.GetInt16(0);
@@ -205,7 +203,7 @@ namespace bibliotecadb.dominio
             return (ejemplar);
         }
 
-        public ejemplares buscarEjemplarXid(string _id_libro)
+        public ejemplares buscarEjemplarXidLibro(string _id_libro)
         {
             string sql = "SELECT * FROM ejemplares WHERE id_libro=@id_ AND estado = 'Disponible';";
             comando = new MySqlCommand(sql, conn.GetConexion());

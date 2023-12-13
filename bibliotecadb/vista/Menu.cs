@@ -1,4 +1,5 @@
-﻿using bibliotecadb.vista.Lectores;
+﻿using bibliotecadb.vista.Ejemplares;
+using bibliotecadb.vista.Lectores;
 using bibliotecadb.vista.Libros;
 using System;
 using System.Collections.Generic;
@@ -121,8 +122,8 @@ namespace bibliotecadb.vista
             btnPrestamos.Visible = true;
             pnPrestamos.Visible = true;
             subMenuPrestamos.BringToFront();
-            //agregarLibros agregarLibros = new agregarLibros();
-            //cambiarventana(agregarLibros);
+            agregarEjemplares agregarEjemplar = new agregarEjemplares();
+            cambiarventana(agregarEjemplar);
         }
 
         private void btnModificarEjemplares_Click(object sender, EventArgs e)
@@ -135,8 +136,8 @@ namespace bibliotecadb.vista
             btnPrestamos.Visible = true;
             pnPrestamos.Visible = true;
             subMenuEjemplares.BringToFront();
-            //agregarLibros agregarLibros = new agregarLibros();
-            //cambiarventana(agregarLibros);
+            modificarEjemplar modificarEjemplar = new modificarEjemplar();
+            cambiarventana(modificarEjemplar);
         }
 
         private void btnAgregarLectores_Click(object sender, EventArgs e)

@@ -111,7 +111,7 @@ namespace bibliotecadb.vista
             EjemplarData pene = new EjemplarData();
             ejemplares datito = new ejemplares();
             dato = librito.buscarLibroXid(id_);
-            datito = pene.buscarEjemplarXid(id_);
+            datito = pene.buscarEjemplarXidLibro(id_);
 
 
             dtgDatos.Rows.Clear();

@@ -14,8 +14,6 @@ namespace bibliotecadb.dominio
 {
     internal class LectorData : ILector
     {
-        StreamWriter erroraso = new StreamWriter("errores-Lector.txt");
-
         private conexion conn = new conexion();
         private MySqlCommand comando;
 
@@ -48,7 +46,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
@@ -90,7 +87,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
@@ -122,8 +118,8 @@ namespace bibliotecadb.dominio
                     lector.IdLector = puntero.GetInt16(0);
                     lector.Apellido = puntero.GetString(1);
                     lector.Nombre = puntero.GetString(2);
-                    lector.Domicilio = puntero.GetString(3);
-                    lector.Dni = puntero.GetString(4);
+                    lector.Dni = puntero.GetString(3);
+                    lector.Domicilio = puntero.GetString(4);
                     lector.Telefono = puntero.GetString(5);
                     lector.Estado = true;
                 }
@@ -131,7 +127,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
@@ -162,7 +157,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
@@ -232,7 +226,6 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
             }
 
             finally
