@@ -14,7 +14,7 @@ namespace bibliotecadb.dominio
         void eliminarPrestamo(int _id_Prestamo);
         void modificarPrestamo(prestamos _prestamo);
         List<prestamos> listarPrestamos();
-        prestamos buscarPrestamo(string _id_ejemplar);
+        prestamos buscarPrestamoXidLector(string _id_lector);
         prestamos buscarPrestamoXid(string _id_Prestamo);
     }
 }

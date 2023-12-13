@@ -8,20 +8,20 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using bibliotecadb.dominio;
+using bibliotecadb.modelo;
 using MySql.Data.MySqlClient;
 
 namespace bibliotecadb.vista
 {
     public partial class UsuarioNuevo : Form
     {
-        private MySqlConnection conexion;
 
         private string nombre;
         private string apellido;
         private string domicilio;
         private string telefono;
         private string dni;
-        private int activo = 1;
 
         private bool nband = false;
         private bool aband = false;
@@ -51,7 +51,17 @@ namespace bibliotecadb.vista
                 telefono = txtTelefono.Text;
                 dni = txtDni.Text;
 
-                MessageBox.Show("Usuario creado con exito! Inicia sesion","Usuario nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LectorData lectornuevo = new LectorData();
+                lectores lector = new lectores();
+                lector.Dni = dni;
+                lector.Nombre = nombre;
+                lector.Apellido = apellido;
+                lector.Domicilio = domicilio;
+                lector.Telefono = telefono;
+                lector.Estado = true;
+                lectornuevo.agregarLector(lector);
+
+                MessageBox.Show("Usuario creado con exito! Ya puedes disfrutar del catalogo", "Usuario nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 FormularioLibros formularioLibros = new FormularioLibros();
                 this.Hide();

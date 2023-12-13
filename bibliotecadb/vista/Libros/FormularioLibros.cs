@@ -47,7 +47,7 @@ namespace bibliotecadb.vista
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CuentaExistente cuentaExistente = new CuentaExistente();
+            MenuPrincipal cuentaExistente = new MenuPrincipal();
             this.Hide();
             cuentaExistente.Show();
         }
@@ -84,6 +84,11 @@ namespace bibliotecadb.vista
         {
             Menu menu = new Menu();
             this.Hide(); menu.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

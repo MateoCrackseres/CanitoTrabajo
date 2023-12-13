@@ -95,12 +95,6 @@
     <Compile Include="vista\Libros\agregarLibros.Designer.cs">
       <DependentUpon>agregarLibros.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\Libros\CuentaExistente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\Libros\CuentaExistente.Designer.cs">
-      <DependentUpon>CuentaExistente.cs</DependentUpon>
-    </Compile>
     <Compile Include="vista\Libros\FormularioLibros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,9 +154,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Libros\agregarLibros.resx">
       <DependentUpon>agregarLibros.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\Libros\CuentaExistente.resx">
-      <DependentUpon>CuentaExistente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Libros\FormularioLibros.resx">
       <DependentUpon>FormularioLibros.cs</DependentUpon>

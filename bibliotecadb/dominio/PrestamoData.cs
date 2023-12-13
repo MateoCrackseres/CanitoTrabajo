@@ -7,13 +7,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace bibliotecadb.dominio
 {
     internal class PrestamoData : IPrestamo
     {
 
-        StreamWriter erroraso = new StreamWriter("errores-Lector.txt");
+
 
         private conexion conn = new conexion();
         private MySqlCommand comando;
@@ -31,9 +32,9 @@ namespace bibliotecadb.dominio
             comando.Parameters["@id_lector"].Value = _prestamo.Id_lector;
             comando.Parameters.Add("@id_ejemplar", MySqlDbType.VarChar);
             comando.Parameters["@id_ejemplar"].Value = _prestamo.Id_ejemplar;
-            comando.Parameters.Add("@fechaPrestamo", MySqlDbType.VarChar);
+            comando.Parameters.Add("@fechaPrestamo", MySqlDbType.DateTime);
             comando.Parameters["@fechaPrestamo"].Value = _prestamo.FechaPrestamos;
-            comando.Parameters.Add("@fechaEntrega", MySqlDbType.VarChar);
+            comando.Parameters.Add("@fechaEntrega", MySqlDbType.DateTime);
             comando.Parameters["@fechaEntrega"].Value = _prestamo.FechaEntrega;
             comando.Parameters.Add("@estado", MySqlDbType.Int16);
             comando.Parameters["@estado"].Value = _prestamo.Estado;
@@ -45,7 +46,7 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
+                RegistrarErrorEnArchivo(error);
             }
 
             finally
@@ -73,7 +74,7 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
+                RegistrarErrorEnArchivo(error);
             }
 
             finally
@@ -89,7 +90,7 @@ namespace bibliotecadb.dominio
         public List<prestamos> listarPrestamos()
         {
             List<prestamos> listaPrestamos = new List<prestamos>();
-            string consulta = "SELECT *FROM prestamos WHERE estado = true;";
+            string consulta = "SELECT *FROM prestamos WHERE estado = TRUE;";
             comando = new MySqlCommand(consulta, conn.GetConexion());
             try
             {
@@ -97,19 +98,19 @@ namespace bibliotecadb.dominio
                 while (puntero.Read())
                 {
                     prestamos _prestamo = new prestamos();
-                    _prestamo.Id_Prestamo = puntero.GetInt16(0);
-                    _prestamo.Id_lector = puntero.GetInt16(1);
-                    _prestamo.Id_ejemplar = puntero.GetInt16(2);
+                    _prestamo.Id_Prestamo = puntero.GetInt32(0);
+                    _prestamo.Id_lector = puntero.GetInt32(1);
+                    _prestamo.Id_ejemplar = puntero.GetInt32(2);
                     _prestamo.FechaPrestamos = puntero.GetDateTime(3);
                     _prestamo.FechaEntrega = puntero.GetDateTime(4);
-                    _prestamo.Estado = puntero.GetBoolean(6);
+                    _prestamo.Estado = puntero.GetBoolean(5);
 
                     listaPrestamos.Add(_prestamo);
                 }
             }
-            catch (Exception)
+            catch (Exception error)
             {
-                throw;
+                RegistrarErrorEnArchivo(error);
             }
             return (listaPrestamos);
 
@@ -126,9 +127,9 @@ namespace bibliotecadb.dominio
             comando.Parameters["@id_lector_"].Value = _prestamo.Id_lector;
             comando.Parameters.Add("@id_ejemplar_", MySqlDbType.VarChar);
             comando.Parameters["@id_ejemplar_"].Value = _prestamo.Id_ejemplar;
-            comando.Parameters.Add("@fechaPrestamo_", MySqlDbType.VarChar);
+            comando.Parameters.Add("@fechaPrestamo_", MySqlDbType.DateTime);
             comando.Parameters["@fechaPrestamo_"].Value = _prestamo.FechaPrestamos;
-            comando.Parameters.Add("@fechaEntrega_", MySqlDbType.VarChar);
+            comando.Parameters.Add("@fechaEntrega_", MySqlDbType.DateTime);
             comando.Parameters["@fechaEntrega_"].Value = _prestamo.FechaEntrega;
             comando.Parameters.Add("@id_", MySqlDbType.Int16);
             comando.Parameters["@id_"].Value = _prestamo.Id_Prestamo;
@@ -140,7 +141,7 @@ namespace bibliotecadb.dominio
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
+                RegistrarErrorEnArchivo(error);
             }
 
             finally
@@ -155,14 +156,14 @@ namespace bibliotecadb.dominio
             }
         }
 
-        prestamos IPrestamo.buscarPrestamo(string _id_ejemplar)
+        public prestamos buscarPrestamoXidLector(string _id_lector)
         {
-            string sql = "SELECT * FROM prestamos WHERE id_ejemplar=@id_ejemplar_ AND estado = TRUE;";
+            string sql = "SELECT * FROM prestamos WHERE id_lector=@id_lector_ AND estado = TRUE;";
             comando = new MySqlCommand(sql, conn.GetConexion());
             prestamos prestamo = new prestamos();
 
-            comando.Parameters.Add("@id_ejemplar_", MySqlDbType.String);
-            comando.Parameters["@id_ejemplar_"].Value = _id_ejemplar;
+            comando.Parameters.Add("@id_lector_", MySqlDbType.String);
+            comando.Parameters["@id_lector_"].Value = _id_lector;
             try
             {
 
@@ -170,19 +171,19 @@ namespace bibliotecadb.dominio
 
                 while (puntero.Read())
                 {
-                    prestamo.Id_Prestamo = puntero.GetInt16(0);
-                    prestamo.Id_lector = puntero.GetInt16(1);
-                    prestamo.Id_ejemplar = puntero.GetInt16(2);
+                    prestamo.Id_Prestamo = puntero.GetInt32(0);
+                    prestamo.Id_lector = puntero.GetInt32(1);
+                    prestamo.Id_ejemplar = puntero.GetInt32(2);
                     prestamo.FechaPrestamos = puntero.GetDateTime(3);
                     prestamo.FechaEntrega = puntero.GetDateTime(4);
-                    prestamo.Estado = puntero.GetBoolean(6);
+                    prestamo.Estado = puntero.GetBoolean(5);
 
                 }
                 conn.setConexion();
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
+                RegistrarErrorEnArchivo(error);
             }
 
             finally
@@ -198,7 +199,7 @@ namespace bibliotecadb.dominio
             return (prestamo);
         }
 
-        prestamos IPrestamo.buscarPrestamoXid(string _id_Prestamo)
+        public prestamos buscarPrestamoXid(string _id_Prestamo)
         {
             string sql = "SELECT * FROM prestamos WHERE idPrestamo=@id_ AND estado = TRUE;";
             comando = new MySqlCommand(sql, conn.GetConexion());
@@ -211,18 +212,18 @@ namespace bibliotecadb.dominio
                 MySqlDataReader puntero = comando.ExecuteReader();
                 while (puntero.Read())
                 {
-                    prestamo.Id_Prestamo = puntero.GetInt16(0);
-                    prestamo.Id_lector = puntero.GetInt16(1);
-                    prestamo.Id_ejemplar = puntero.GetInt16(2);
+                    prestamo.Id_Prestamo = puntero.GetInt32(0);
+                    prestamo.Id_lector = puntero.GetInt32(1);
+                    prestamo.Id_ejemplar = puntero.GetInt32(2);
                     prestamo.FechaPrestamos = puntero.GetDateTime(3);
                     prestamo.FechaEntrega = puntero.GetDateTime(4);
-                    prestamo.Estado = puntero.GetBoolean(6);
+                    prestamo.Estado = puntero.GetBoolean(5);
                 }
                 conn.setConexion();
             }
             catch (MySqlException error)
             {
-                erroraso.WriteLine(error.ToString());
+                RegistrarErrorEnArchivo(error);
             }
 
             finally
@@ -236,6 +237,24 @@ namespace bibliotecadb.dominio
                 comando.Dispose();
             }
             return (prestamo);
+        }
+        private void RegistrarErrorEnArchivo(Exception ex)
+        {
+            string mensajeError = $"Fecha y Hora: {DateTime.Now}\nError: {ex.Message}\n\n";
+
+            try
+            {
+                using (StreamWriter mensaje = new StreamWriter("ErrorLectorData.txt"))
+                {
+                    mensaje.WriteLine(mensajeError);
+                }
+
+                MessageBox.Show("Error registrado en el archivo: " + "ErrorLectorData.txt");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al intentar registrar el error en el archivo.");
+            }
         }
     }
 }

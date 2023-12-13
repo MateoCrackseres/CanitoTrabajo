@@ -31,25 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.subMenuLibro = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnModificarLibro = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnAgregarLibro = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnLibros = new System.Windows.Forms.Button();
-            this.pnLibro = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnEjemplares = new System.Windows.Forms.Button();
-            this.pnLectores = new System.Windows.Forms.Panel();
-            this.btnLectores = new System.Windows.Forms.Button();
-            this.pnPrestamos = new System.Windows.Forms.Panel();
-            this.btnPrestamos = new System.Windows.Forms.Button();
-            this.pnEjemplares = new System.Windows.Forms.Panel();
-            this.pnInicio = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.subMenuEjemplares = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -68,13 +55,26 @@
             this.btnModificarPrestamos = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btnAgregarPrestamos = new System.Windows.Forms.Button();
+            this.pnInicio = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pnEjemplares = new System.Windows.Forms.Panel();
+            this.pnPrestamos = new System.Windows.Forms.Panel();
+            this.btnEjemplares = new System.Windows.Forms.Button();
+            this.btnPrestamos = new System.Windows.Forms.Button();
+            this.pnLectores = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnLectores = new System.Windows.Forms.Button();
+            this.pnLibro = new System.Windows.Forms.Panel();
+            this.btnLibros = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.subMenuLibro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.subMenuEjemplares.SuspendLayout();
             this.subMenuLectores.SuspendLayout();
             this.subMenuPrestamos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,17 +111,6 @@
             this.panel2.Size = new System.Drawing.Size(220, 576);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 528);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(66, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // subMenuLibro
             // 
             this.subMenuLibro.Controls.Add(this.panel5);
@@ -134,6 +123,14 @@
             this.subMenuLibro.Size = new System.Drawing.Size(200, 100);
             this.subMenuLibro.TabIndex = 2;
             this.subMenuLibro.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel5.Location = new System.Drawing.Point(-17, 40);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 32);
+            this.panel5.TabIndex = 8;
             // 
             // panel7
             // 
@@ -182,157 +179,6 @@
             this.btnAgregarLibro.Text = "Agregar Libro";
             this.btnAgregarLibro.UseVisualStyleBackColor = true;
             this.btnAgregarLibro.Click += new System.EventHandler(this.btnAgregarLibro_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 140);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(220, 35);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1064, 576);
-            this.panel3.TabIndex = 2;
-            // 
-            // btnLibros
-            // 
-            this.btnLibros.FlatAppearance.BorderSize = 0;
-            this.btnLibros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLibros.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLibros.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLibros.Image = ((System.Drawing.Image)(resources.GetObject("btnLibros.Image")));
-            this.btnLibros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLibros.Location = new System.Drawing.Point(14, 258);
-            this.btnLibros.Name = "btnLibros";
-            this.btnLibros.Size = new System.Drawing.Size(206, 32);
-            this.btnLibros.TabIndex = 4;
-            this.btnLibros.Text = "Libros";
-            this.btnLibros.UseVisualStyleBackColor = true;
-            this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click);
-            // 
-            // pnLibro
-            // 
-            this.pnLibro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnLibro.Location = new System.Drawing.Point(3, 258);
-            this.pnLibro.Name = "pnLibro";
-            this.pnLibro.Size = new System.Drawing.Size(5, 32);
-            this.pnLibro.TabIndex = 5;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(-17, 40);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(5, 32);
-            this.panel5.TabIndex = 8;
-            // 
-            // btnEjemplares
-            // 
-            this.btnEjemplares.FlatAppearance.BorderSize = 0;
-            this.btnEjemplares.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnEjemplares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEjemplares.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEjemplares.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEjemplares.Image = ((System.Drawing.Image)(resources.GetObject("btnEjemplares.Image")));
-            this.btnEjemplares.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEjemplares.Location = new System.Drawing.Point(14, 311);
-            this.btnEjemplares.Name = "btnEjemplares";
-            this.btnEjemplares.Size = new System.Drawing.Size(206, 32);
-            this.btnEjemplares.TabIndex = 7;
-            this.btnEjemplares.Text = "Ejemplares";
-            this.btnEjemplares.UseVisualStyleBackColor = true;
-            this.btnEjemplares.Click += new System.EventHandler(this.btnEjemplares_Click);
-            // 
-            // pnLectores
-            // 
-            this.pnLectores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnLectores.Location = new System.Drawing.Point(3, 365);
-            this.pnLectores.Name = "pnLectores";
-            this.pnLectores.Size = new System.Drawing.Size(5, 32);
-            this.pnLectores.TabIndex = 10;
-            // 
-            // btnLectores
-            // 
-            this.btnLectores.FlatAppearance.BorderSize = 0;
-            this.btnLectores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnLectores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLectores.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLectores.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLectores.Image = ((System.Drawing.Image)(resources.GetObject("btnLectores.Image")));
-            this.btnLectores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLectores.Location = new System.Drawing.Point(14, 365);
-            this.btnLectores.Name = "btnLectores";
-            this.btnLectores.Size = new System.Drawing.Size(206, 32);
-            this.btnLectores.TabIndex = 9;
-            this.btnLectores.Text = "Lectores";
-            this.btnLectores.UseVisualStyleBackColor = true;
-            this.btnLectores.Click += new System.EventHandler(this.btnLectores_Click);
-            // 
-            // pnPrestamos
-            // 
-            this.pnPrestamos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnPrestamos.Location = new System.Drawing.Point(3, 418);
-            this.pnPrestamos.Name = "pnPrestamos";
-            this.pnPrestamos.Size = new System.Drawing.Size(5, 32);
-            this.pnPrestamos.TabIndex = 12;
-            // 
-            // btnPrestamos
-            // 
-            this.btnPrestamos.FlatAppearance.BorderSize = 0;
-            this.btnPrestamos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrestamos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrestamos.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPrestamos.Image = ((System.Drawing.Image)(resources.GetObject("btnPrestamos.Image")));
-            this.btnPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrestamos.Location = new System.Drawing.Point(14, 418);
-            this.btnPrestamos.Name = "btnPrestamos";
-            this.btnPrestamos.Size = new System.Drawing.Size(206, 32);
-            this.btnPrestamos.TabIndex = 11;
-            this.btnPrestamos.Text = "Prestamos";
-            this.btnPrestamos.UseVisualStyleBackColor = true;
-            this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
-            // 
-            // pnEjemplares
-            // 
-            this.pnEjemplares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnEjemplares.Location = new System.Drawing.Point(3, 311);
-            this.pnEjemplares.Name = "pnEjemplares";
-            this.pnEjemplares.Size = new System.Drawing.Size(5, 32);
-            this.pnEjemplares.TabIndex = 11;
-            // 
-            // pnInicio
-            // 
-            this.pnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnInicio.Location = new System.Drawing.Point(3, 200);
-            this.pnInicio.Name = "pnInicio";
-            this.pnInicio.Size = new System.Drawing.Size(5, 32);
-            this.pnInicio.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(14, 200);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Inicio";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // subMenuEjemplares
             // 
@@ -541,6 +387,160 @@
             this.btnAgregarPrestamos.UseVisualStyleBackColor = true;
             this.btnAgregarPrestamos.Click += new System.EventHandler(this.btnAgregarPrestamos_Click);
             // 
+            // pnInicio
+            // 
+            this.pnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.pnInicio.Location = new System.Drawing.Point(3, 200);
+            this.pnInicio.Name = "pnInicio";
+            this.pnInicio.Size = new System.Drawing.Size(5, 32);
+            this.pnInicio.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(14, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(206, 32);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Inicio";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pnEjemplares
+            // 
+            this.pnEjemplares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.pnEjemplares.Location = new System.Drawing.Point(3, 311);
+            this.pnEjemplares.Name = "pnEjemplares";
+            this.pnEjemplares.Size = new System.Drawing.Size(5, 32);
+            this.pnEjemplares.TabIndex = 11;
+            // 
+            // pnPrestamos
+            // 
+            this.pnPrestamos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.pnPrestamos.Location = new System.Drawing.Point(3, 418);
+            this.pnPrestamos.Name = "pnPrestamos";
+            this.pnPrestamos.Size = new System.Drawing.Size(5, 32);
+            this.pnPrestamos.TabIndex = 12;
+            // 
+            // btnEjemplares
+            // 
+            this.btnEjemplares.FlatAppearance.BorderSize = 0;
+            this.btnEjemplares.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnEjemplares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEjemplares.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEjemplares.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEjemplares.Image = ((System.Drawing.Image)(resources.GetObject("btnEjemplares.Image")));
+            this.btnEjemplares.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEjemplares.Location = new System.Drawing.Point(14, 311);
+            this.btnEjemplares.Name = "btnEjemplares";
+            this.btnEjemplares.Size = new System.Drawing.Size(206, 32);
+            this.btnEjemplares.TabIndex = 7;
+            this.btnEjemplares.Text = "Ejemplares";
+            this.btnEjemplares.UseVisualStyleBackColor = true;
+            this.btnEjemplares.Click += new System.EventHandler(this.btnEjemplares_Click);
+            // 
+            // btnPrestamos
+            // 
+            this.btnPrestamos.FlatAppearance.BorderSize = 0;
+            this.btnPrestamos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrestamos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrestamos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPrestamos.Image = ((System.Drawing.Image)(resources.GetObject("btnPrestamos.Image")));
+            this.btnPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrestamos.Location = new System.Drawing.Point(14, 418);
+            this.btnPrestamos.Name = "btnPrestamos";
+            this.btnPrestamos.Size = new System.Drawing.Size(206, 32);
+            this.btnPrestamos.TabIndex = 11;
+            this.btnPrestamos.Text = "Prestamos";
+            this.btnPrestamos.UseVisualStyleBackColor = true;
+            this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
+            // 
+            // pnLectores
+            // 
+            this.pnLectores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.pnLectores.Location = new System.Drawing.Point(3, 365);
+            this.pnLectores.Name = "pnLectores";
+            this.pnLectores.Size = new System.Drawing.Size(5, 32);
+            this.pnLectores.TabIndex = 10;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 528);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // btnLectores
+            // 
+            this.btnLectores.FlatAppearance.BorderSize = 0;
+            this.btnLectores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnLectores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLectores.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLectores.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLectores.Image = ((System.Drawing.Image)(resources.GetObject("btnLectores.Image")));
+            this.btnLectores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLectores.Location = new System.Drawing.Point(14, 365);
+            this.btnLectores.Name = "btnLectores";
+            this.btnLectores.Size = new System.Drawing.Size(206, 32);
+            this.btnLectores.TabIndex = 9;
+            this.btnLectores.Text = "Lectores";
+            this.btnLectores.UseVisualStyleBackColor = true;
+            this.btnLectores.Click += new System.EventHandler(this.btnLectores_Click);
+            // 
+            // pnLibro
+            // 
+            this.pnLibro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.pnLibro.Location = new System.Drawing.Point(3, 258);
+            this.pnLibro.Name = "pnLibro";
+            this.pnLibro.Size = new System.Drawing.Size(5, 32);
+            this.pnLibro.TabIndex = 5;
+            // 
+            // btnLibros
+            // 
+            this.btnLibros.FlatAppearance.BorderSize = 0;
+            this.btnLibros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLibros.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLibros.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLibros.Image = ((System.Drawing.Image)(resources.GetObject("btnLibros.Image")));
+            this.btnLibros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLibros.Location = new System.Drawing.Point(14, 258);
+            this.btnLibros.Name = "btnLibros";
+            this.btnLibros.Size = new System.Drawing.Size(206, 32);
+            this.btnLibros.TabIndex = 4;
+            this.btnLibros.Text = "Libros";
+            this.btnLibros.UseVisualStyleBackColor = true;
+            this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(220, 140);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(220, 35);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1064, 576);
+            this.panel3.TabIndex = 2;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,17 +549,17 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.subMenuLibro.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.subMenuEjemplares.ResumeLayout(false);
             this.subMenuLectores.ResumeLayout(false);
             this.subMenuPrestamos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using bibliotecadb.datos;
+using System.IO;
+using System.Windows.Forms;
 
 namespace bibliotecadb.datos
 {
@@ -35,7 +37,7 @@ namespace bibliotecadb.datos
                 }
                 catch (MySqlException error)
                 {
-                    throw;
+                    RegistrarErrorEnArchivo(error);
                 }
 
             }
@@ -51,6 +53,24 @@ namespace bibliotecadb.datos
         public ConnectionState estadoConexion()
         {
             return (conn.State);
+        }
+        private void RegistrarErrorEnArchivo(Exception ex)
+        {
+            string mensajeError = $"Fecha y Hora: {DateTime.Now}\nError: {ex.Message}\n\n";
+
+            try
+            {
+                using (StreamWriter mensaje = new StreamWriter("ErrorLectorData.txt"))
+                {
+                    mensaje.WriteLine(mensajeError);
+                }
+
+                MessageBox.Show("Error registrado en el archivo: " + "ErrorLectorData.txt");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al intentar registrar el error en el archivo.");
+            }
         }
     }
 }
