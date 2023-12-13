@@ -106,7 +106,7 @@ namespace bibliotecadb.dominio
             return (lector);
         }
 
-        public lectores buscarLectorXid(int _idLector)
+        public lectores buscarLectorXid(string _idLector)
         {
             string sql = "SELECT * FROM lectores WHERE idLector=@id_ AND estado = TRUE;";
             comando = new MySqlCommand(sql, conn.GetConexion());

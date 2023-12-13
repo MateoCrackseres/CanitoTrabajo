@@ -19,9 +19,9 @@ namespace bibliotecadb.vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Administrar administrar = new Administrar();
+            /*Administrar administrar = new Administrar();
             this.Hide();
-            administrar.Show();
+            administrar.Show();*/
         }
     }
 }

@@ -65,35 +65,23 @@
     <Compile Include="modelo\prestamos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="vista\Lectores\LectorEliminar.cs">
-      <SubType>Form</SubType>
+    <Compile Include="vista\Lectores\agregarLectores.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="vista\Lectores\LectorEliminar.Designer.cs">
-      <DependentUpon>LectorEliminar.cs</DependentUpon>
+    <Compile Include="vista\Lectores\agregarLectores.Designer.cs">
+      <DependentUpon>agregarLectores.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\Libros\Administrar.cs">
-      <SubType>Form</SubType>
+    <Compile Include="vista\Lectores\modificarLectores.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="vista\Libros\Administrar.Designer.cs">
-      <DependentUpon>Administrar.cs</DependentUpon>
+    <Compile Include="vista\Lectores\modificarLectores.Designer.cs">
+      <DependentUpon>modificarLectores.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\Libros\AdministrarAgregar.cs">
-      <SubType>Form</SubType>
+    <Compile Include="vista\Libros\agregarLibros.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="vista\Libros\AdministrarAgregar.Designer.cs">
-      <DependentUpon>AdministrarAgregar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vista\Libros\AdministrarEliminarXID.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\Libros\AdministrarEliminarXID.Designer.cs">
-      <DependentUpon>AdministrarEliminarXID.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vista\Libros\AdministrarModificar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\Libros\AdministrarModificar.Designer.cs">
-      <DependentUpon>AdministrarModificar.cs</DependentUpon>
+    <Compile Include="vista\Libros\agregarLibros.Designer.cs">
+      <DependentUpon>agregarLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\Libros\CuentaExistente.cs">
       <SubType>Form</SubType>
@@ -113,6 +101,12 @@
     <Compile Include="vista\Libros\MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\Libros\modificarLibro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vista\Libros\modificarLibro.Designer.cs">
+      <DependentUpon>modificarLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\Libros\PuenteA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +119,12 @@
     <Compile Include="vista\Libros\UsuarioNuevo.Designer.cs">
       <DependentUpon>UsuarioNuevo.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -134,20 +134,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="vista\Lectores\LectorEliminar.resx">
-      <DependentUpon>LectorEliminar.cs</DependentUpon>
+    <EmbeddedResource Include="vista\Lectores\agregarLectores.resx">
+      <DependentUpon>agregarLectores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vista\Libros\Administrar.resx">
-      <DependentUpon>Administrar.cs</DependentUpon>
+    <EmbeddedResource Include="vista\Lectores\modificarLectores.resx">
+      <DependentUpon>modificarLectores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vista\Libros\AdministrarAgregar.resx">
-      <DependentUpon>AdministrarAgregar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\Libros\AdministrarEliminarXID.resx">
-      <DependentUpon>AdministrarEliminarXID.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\Libros\AdministrarModificar.resx">
-      <DependentUpon>AdministrarModificar.cs</DependentUpon>
+    <EmbeddedResource Include="vista\Libros\agregarLibros.resx">
+      <DependentUpon>agregarLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Libros\CuentaExistente.resx">
       <DependentUpon>CuentaExistente.cs</DependentUpon>
@@ -158,11 +152,17 @@
     <EmbeddedResource Include="vista\Libros\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\Libros\modificarLibro.resx">
+      <DependentUpon>modificarLibro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\Libros\PuenteA.resx">
       <DependentUpon>PuenteA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Libros\UsuarioNuevo.resx">
       <DependentUpon>UsuarioNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

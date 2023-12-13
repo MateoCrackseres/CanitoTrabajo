@@ -14,6 +14,6 @@ namespace bibliotecadb.dominio
         void modificarLector(lectores _lector);
         List<lectores> listarLectores();
         lectores buscarLector(string _dni);
-        lectores buscarLectorXid(int _idLector);
+        lectores buscarLectorXid(string _idLector);
     }
 }
