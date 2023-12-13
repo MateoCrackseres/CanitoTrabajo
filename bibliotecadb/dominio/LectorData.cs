@@ -150,8 +150,8 @@ namespace bibliotecadb.dominio
             string consulta = "UPDATE lectores SET estado= 0 WHERE idLector= @_idLector;";
             comando = new MySqlCommand(consulta, conn.GetConexion());
             
-            comando.Parameters.Add("@e_idLector", MySqlDbType.Int16);
-            comando.Parameters["@e_idLector"].Value = _idLector;
+            comando.Parameters.Add("@_idLector", MySqlDbType.Int16);
+            comando.Parameters["@_idLector"].Value = _idLector;
 
             try
             {

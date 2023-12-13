@@ -36,11 +36,9 @@ namespace bibliotecadb.vista.Ejemplares
             txtBuscar2.Visible = false;
             btnBuscar2.Visible = false;
             txtCodigo.Visible = true;
-            txtIdLibro.Visible = true;
             txtCantidad.Visible = true;
             txtEstado.Visible = true;
             label2.Visible = true;
-            label3.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
             btnModificarEjemplar.Visible = true;
@@ -52,7 +50,6 @@ namespace bibliotecadb.vista.Ejemplares
             ejemplar = datos.buscarEjemplarXId(_id);
 
             txtCodigo.Text = ejemplar.Codigo;
-            txtIdLibro.Text = ejemplar.Id_libro.ToString();
             txtCantidad.Text = ejemplar.Cantidad.ToString();
             txtEstado.Text = ejemplar.Estado;
             txtBuscar2.Clear();
@@ -66,11 +63,9 @@ namespace bibliotecadb.vista.Ejemplares
             txtBuscar2.Visible = true;
             btnBuscar2.Visible = true;
             txtCodigo.Visible = false;
-            txtIdLibro.Visible = false;
             txtCodigo.Visible = false;
             txtEstado.Visible = false;
             label2.Visible = false;
-            label3.Visible = false;
             label4.Visible = false;
             label5.Visible = false;
             btnModificarEjemplar.Visible = false;
@@ -126,7 +121,7 @@ namespace bibliotecadb.vista.Ejemplares
         private void btnModificarEjemplar_Click(object sender, EventArgs e)
         {
             ejemplar.Codigo = txtCodigo.Text.Trim();
-            ejemplar.Id_libro = int.Parse(txtIdLibro.Text.Trim());
+            
             ejemplar.Cantidad = int.Parse(txtCantidad.Text.Trim());
             ejemplar.Estado = txtEstado.Text.Trim();
 
@@ -141,7 +136,6 @@ namespace bibliotecadb.vista.Ejemplares
             MessageBox.Show("Los datos fueron modificados con EXITO", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             txtCodigo.Clear();
-            txtIdLibro.Clear();
             txtCantidad.Clear();
             txtEstado.Clear();
 
@@ -149,11 +143,9 @@ namespace bibliotecadb.vista.Ejemplares
             txtBuscar2.Visible = true;
             btnBuscar2.Visible = true;
             txtCodigo.Visible = false;
-            txtIdLibro.Visible = false;
             txtCantidad.Visible = false;
             txtEstado.Visible = false;
             label2.Visible = false;
-            label3.Visible = false;
             label4.Visible = false;
             label5.Visible = false;
             btnModificarEjemplar.Visible = false;

@@ -61,12 +61,14 @@ namespace bibliotecadb.vista.Lectores
             if (respuesta == DialogResult.Yes)
             {
                 int id = (int)dtgLectores.CurrentRow.Cells[0].Value;
-                LibroData datitos = new LibroData();
-                datitos.eliminarLibro(id);
+                LectorData datitos = new LectorData();
+                datitos.eliminarLector(id);
                 dtgLectores.Rows.Clear();
                 MessageBox.Show("El lector fue borrado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 Cargartabla();
             }
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)

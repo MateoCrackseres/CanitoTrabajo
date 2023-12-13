@@ -23,7 +23,6 @@ namespace bibliotecadb.vista
 
         private void FormularioLibros_Load(object sender, EventArgs e)
         {
-            Application.Exit();
         }
         private void Cargartabla()
         {

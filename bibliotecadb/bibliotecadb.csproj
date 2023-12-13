@@ -113,12 +113,6 @@
     <Compile Include="vista\Libros\modificarLibro.Designer.cs">
       <DependentUpon>modificarLibro.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\Libros\PuenteA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\Libros\PuenteA.Designer.cs">
-      <DependentUpon>PuenteA.cs</DependentUpon>
-    </Compile>
     <Compile Include="vista\Libros\UsuarioNuevo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,9 +163,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Libros\modificarLibro.resx">
       <DependentUpon>modificarLibro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\Libros\PuenteA.resx">
-      <DependentUpon>PuenteA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Libros\UsuarioNuevo.resx">
       <DependentUpon>UsuarioNuevo.cs</DependentUpon>

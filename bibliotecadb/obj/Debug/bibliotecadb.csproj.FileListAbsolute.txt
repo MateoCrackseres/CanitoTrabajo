@@ -102,7 +102,6 @@ C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\D
 C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.FormularioLibros.resources
 C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.MenuPrincipal.resources
 C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.Libros.modificarLibro.resources
-C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.PuenteA.resources
 C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.UsuarioNuevo.resources
 C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.Menu.resources
 C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.csproj.GenerateResource.cache
@@ -111,3 +110,4 @@ C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\D
 C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.exe
 C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.pdb
 C:\Users\Usuario\Desktop\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.Prestamos.modificarPrestamos.resources
+C:\Users\matre\OneDrive\Escritorio\bibliotecadb\CanitoTrabajo\bibliotecadb\obj\Debug\bibliotecadb.vista.Prestamos.modificarPrestamos.resources

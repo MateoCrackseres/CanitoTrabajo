@@ -28,32 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtIdLibro = new System.Windows.Forms.TextBox();
             this.btnModificarEjemplar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.dtgEjemplares = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtBuscar2 = new System.Windows.Forms.TextBox();
-            this.btnBuscar2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.idejemplar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idlibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscar2 = new System.Windows.Forms.TextBox();
+            this.btnBuscar2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEjemplares)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,27 +128,6 @@
             this.txtCantidad.Size = new System.Drawing.Size(203, 27);
             this.txtCantidad.TabIndex = 75;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(94, 237);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 25);
-            this.label3.TabIndex = 74;
-            this.label3.Text = "ID Libro";
-            // 
-            // txtIdLibro
-            // 
-            this.txtIdLibro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(201)))), ((int)(((byte)(250)))));
-            this.txtIdLibro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdLibro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtIdLibro.Location = new System.Drawing.Point(99, 265);
-            this.txtIdLibro.Name = "txtIdLibro";
-            this.txtIdLibro.Size = new System.Drawing.Size(203, 27);
-            this.txtIdLibro.TabIndex = 73;
-            // 
             // btnModificarEjemplar
             // 
             this.btnModificarEjemplar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
@@ -169,7 +146,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(94, 174);
+            this.label2.Location = new System.Drawing.Point(94, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 71;
@@ -180,7 +157,7 @@
             this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(201)))), ((int)(((byte)(250)))));
             this.txtCodigo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCodigo.Location = new System.Drawing.Point(99, 202);
+            this.txtCodigo.Location = new System.Drawing.Point(99, 269);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(203, 27);
             this.txtCodigo.TabIndex = 70;
@@ -205,6 +182,46 @@
             this.dtgEjemplares.Size = new System.Drawing.Size(642, 394);
             this.dtgEjemplares.TabIndex = 69;
             // 
+            // idejemplar
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idejemplar.DefaultCellStyle = dataGridViewCellStyle5;
+            this.idejemplar.HeaderText = "ID";
+            this.idejemplar.Name = "idejemplar";
+            this.idejemplar.ReadOnly = true;
+            // 
+            // codigo
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codigo.DefaultCellStyle = dataGridViewCellStyle6;
+            this.codigo.HeaderText = "Codigo";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 150;
+            // 
+            // idlibro
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idlibro.DefaultCellStyle = dataGridViewCellStyle7;
+            this.idlibro.HeaderText = "ID Libro";
+            this.idlibro.Name = "idlibro";
+            this.idlibro.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantidad.DefaultCellStyle = dataGridViewCellStyle8;
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Width = 150;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -221,7 +238,7 @@
             this.txtBuscar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(201)))), ((int)(((byte)(250)))));
             this.txtBuscar2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtBuscar2.Location = new System.Drawing.Point(99, 219);
+            this.txtBuscar2.Location = new System.Drawing.Point(99, 216);
             this.txtBuscar2.Multiline = true;
             this.txtBuscar2.Name = "txtBuscar2";
             this.txtBuscar2.Size = new System.Drawing.Size(203, 80);
@@ -264,46 +281,6 @@
             this.txtEstado.Size = new System.Drawing.Size(203, 27);
             this.txtEstado.TabIndex = 89;
             // 
-            // idejemplar
-            // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idejemplar.DefaultCellStyle = dataGridViewCellStyle1;
-            this.idejemplar.HeaderText = "ID";
-            this.idejemplar.Name = "idejemplar";
-            this.idejemplar.ReadOnly = true;
-            // 
-            // codigo
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codigo.DefaultCellStyle = dataGridViewCellStyle2;
-            this.codigo.HeaderText = "Codigo";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 150;
-            // 
-            // idlibro
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idlibro.DefaultCellStyle = dataGridViewCellStyle3;
-            this.idlibro.HeaderText = "ID Libro";
-            this.idlibro.Name = "idlibro";
-            this.idlibro.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidad.DefaultCellStyle = dataGridViewCellStyle4;
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Width = 150;
-            // 
             // modificarEjemplar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,8 +296,6 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtIdLibro);
             this.Controls.Add(this.btnModificarEjemplar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCodigo);
@@ -343,8 +318,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtIdLibro;
         private System.Windows.Forms.Button btnModificarEjemplar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
